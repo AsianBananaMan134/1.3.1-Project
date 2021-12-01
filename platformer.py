@@ -59,12 +59,14 @@ gravitySpeed = 0
 
 # Jumping mechanics
 def jump():
-    y = p.ycor()
-    y += 
+  global gravitySpeed
+  y = p.ycor()
+  y += gravitySpeed
     # if it goes out of boundaries
-    if x < -290:
-        x = -290
-        gravitySpeed = -1
+  if y < -290:
+      y = -290
+      gravitySpeed = -1
+    if y > 
     p.setx(x)
     time.sleep(0.01)
 
